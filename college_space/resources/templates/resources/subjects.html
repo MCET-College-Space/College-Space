@@ -1,0 +1,40 @@
+{% extends "resources/base.html" %}
+
+{% block title %}
+<title> College Space | Subjects </title>
+{% endblock title %}
+
+{% block content %}
+
+{% include "resources/dept_sem_snippet.html" with form=form %}
+
+<div class="container">
+    <h2> Choose Subject </h2>
+    <hr />
+    {% if subjects %}
+    <div class="row justify-content-center">
+        {% for subject in subjects %}
+        <div class="col-12 col-md-6">
+            <div class="subject-container">
+                <div class="subject">
+                    <div class="subject-preview">
+                        <h6>Code : {{ subject.subject__code }}</h6>
+                        <p>Credit : {{ subject.subject__credit }}</p>
+                    </div>
+                    <div class="subject-info">
+                        <h2>{{ subject.subject__name }}</h2>
+                        <a href="{% url next_url subject.subject__code %}" class="btn">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="container mt-5 text-center">
+        <h2> No subjects available for this department and semester </h2>
+    </div>
+
+    {% endif %}
+</div>
+{% endblock content %}

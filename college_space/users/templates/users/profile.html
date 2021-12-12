@@ -1,0 +1,60 @@
+{% extends "resources/base.html" %}
+
+{% block title%}
+<title>College Space | Register</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container rounded extra-form-design">
+  <div class="row justify-content-center">
+    <div class="col-md-3 border-right">
+      <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+          width="150px" {% if user.profile_pic %} src="{{ user.profile_pic.url }}" {% else %}
+          src="https://college-space.s3.ap-south-1.amazonaws.com/profile_pics/default.jpeg" {% endif %}><span
+          class="font-weight-bold">{{user.first_name}}</span><span class="text-center">{{user.email}}</span><span>
+        </span></div>
+    </div>
+    <div class="col-md-5 border-right">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Profile Settings</h4>
+        </div>
+        <form method="POST" class="d-flex flex-column form-group p-3 register-form mt-3" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+
+          <label for="name_input"> First Name :</label>
+          {{ form.first_name }}
+          {{ form.first_name.errors }}
+
+          <label for="name_input" class="mt-2"> Last Name : </label>
+          {{ form.last_name }}
+          {{ form.last_name.errors }}
+
+          <label for="department_input" class="mt-2"> Department :</label>
+          {{ form.department }}
+          {{ form.department.errors }}
+
+          <label for="semester_input" class="mt-2"> Semester : </label>
+          {{ form.semester }}
+          {{ form.semester.errors }}
+
+          <label for="profile_pic" class="mt-2"> Profile Picture </label>
+          {{ form.profile_pic }}
+          {{ form.profile_pic.errors }}
+
+          <div>
+            <button type="submit" class="btn btn-primary mt-4"> Update Profile </button>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock content %}

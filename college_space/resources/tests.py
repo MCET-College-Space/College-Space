@@ -1,0 +1,1 @@
+''' Resource's testing module. '''

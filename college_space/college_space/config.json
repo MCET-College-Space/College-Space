@@ -1,0 +1,12 @@
+{
+    "SECRET_KEY":"django-insecure-7@3&e_&deprh5!0ez9p1^(t$8dp+&uj3c!u%wm=2n1jciujjn+",
+    "EMAIL_HOST_USER":"mcetcollegespace@gmail.com",
+    "EMAIL_HOST_PASSWORD":"obitgkzhyzrqnjmp",
+    "AWS_ACCESS_KEY_ID" : "AKIA2YIC4PM27VVKK3JS",
+    "AWS_SECRET_ACCESS_KEY" : "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",
+    "AWS_STORAGE_BUCKET_NAME" : "college-space",
+    "DATABASE_USER": "mcet_admin",
+    "DATABASE_PASSWORD": "Collegespace2021",
+    "DATABASE_NAME": "college_space_database",
+    "DATABASE_HOST":"college-space-instance.ck5kkop4jxad.ap-south-1.rds.amazonaws.com"
+}

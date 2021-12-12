@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: #1f1f1f;
+}
+
+.extra-form-design {
+    margin-top: 26px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--secondary-color);
+}
+
+.nav-title {
+    padding: 0px 0px 0px 25px;
+    margin-left: 15px;
+    font-size: 1.8rem;
+    background: -webkit-linear-gradient(#a8c0ff, #3f2b96);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-family: 'Gwendolyn', cursive;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+    height: 100vh;
+    /* Specify a height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+.opennav-img:hover {
+    cursor: pointer;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+
+.sidebar-listing:hover {
+    padding-left: 20px;
+    background-color: #210fbd;
+    color: #fff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    margin-right: 2vw;
+}
+
+/* Style for logout btn */
+.logout-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Main Container Part Style */
+.main-container {
+    max-width: 100vw;
+    min-height: 82vh;
+}
+
+/* home page Style */
+.home-bg-container {
+    background-image: url("/static/img/base-img.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text-home-img {
+    position: initial;
+    bottom: 0px;
+}
+
+.home-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.6rem;
+}
+
+.login-btn {
+    padding: 0.8rem 3.6rem 0.8rem 3.6rem;
+    background-color: black;
+    border: 2px solid #39C0ED;
+    color: #39C0ED;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #39C0ED;
+    color: black;
+}
+
+.signup-btn {
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    background-color: black;
+    border: 2px solid #39C0ED;
+    color: #39C0ED;
+    font-size: 1rem;
+}
+
+.signup-btn:hover {
+    background-color: #39C0ED;
+    color: black;
+}
+
+/* Login page Style */
+
+.login-overviews-container {
+    background-image: url("/static/img/login-img.svg");
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-size: contain;
+    background-position: center;
+    margin-top: 120px;
+}
+
+.login-form-input {
+    min-height: 60vh;
+    background-color: var(--secondary-color);
+    padding: 0 30px 0 40px;
+    margin-top: 4rem;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.login-formo label {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Register page Style */
+.form_input {
+    margin-bottom: 1rem;
+    padding: 6px;
+}
+
+.register-overviews-container {
+    background-image: url("/static/img/signup-img.svg");
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-size: contain;
+}
+
+/* Portrait mobiles */
+@media (max-width: 680px) {
+    .home-bg-container {
+        display: none;
+    }
+
+    .register-overviews-container {
+        display: none;
+    }
+
+    .login-overviews-container {
+        display: none;
+    }
+
+    .dashboard-header-img {
+        display: none;
+    }
+
+}
+
+.register-form-container {
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--secondary-color);
+}
+
+.register-form label {
+    padding-bottom: 0.4rem;
+}
+
+/* Error List  */
+.errorlist li {
+    color: red;
+}
+
+/* Team page Style */
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #151515;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 170px;
+    width: 170px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+    height: 100%;
+}
+
+
+.our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+    bottom: 0;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.our-team .social li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+}
+
+.change-pass label {
+    color: #fff;
+    padding-bottom: 7px;
+}
+
+.change-pass input {
+    margin-bottom: 20px;
+}
+
+.pass-reset label {
+    color: #fff;
+    padding-bottom: 7px;
+}
+
+.pass-reset input {
+    margin-bottom: 20px;
+}
+
+.dark-text {
+    color: rgb(167, 177, 177);
+}
+
+/* footer Style */
+.footer {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--secondary-color);
+}
+
+.resource-list:hover {
+    box-shadow: 0 2.5em .9em -2em #555;
+    transition: transform .8s cubic-bezier(.63, -0.32, .4, 1.39);
+    transition: all 0.4s ease-out;
+}
+
+/* Subjects.html page */
+.subject {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(68, 67, 67, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    color: #fff;
+    height: 250px;
+}
+
+.subject-preview {
+    background-color: #2A265F;
+    color: #fff;
+    padding: 30px;
+    max-width: 250px;
+}
+
+.subject-preview h6 {
+    opacity: 0.7;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.subject-preview p {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-top: 120px;
+    text-decoration: none;
+}
+
+.subject-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.subject-info h2 {
+    position: absolute;
+    letter-spacing: 1px;
+}
+
+.subject-info .btn {
+    background-color: #2A265F;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+}
+
+.dashboard-head-row,
+.dashboard-main-content {
+    height: 90vh;
+}
+
+.dashboard-header-img {
+    background-image: url("/static/img/dash-img.svg");
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-size: contain;
+}
+
+.dashboard-header-content {
+    margin-top: 190px;
+}
+
+.dash-card {
+    background: #1f1f1f;
+    border-radius: .2em;
+    margin-bottom: 30px;
+    box-shadow: 0 2.5em .9em -2em #555;
+    transition: transform .8s cubic-bezier(.63, -0.32, .4, 1.39);
+}
+
+.dash-card:hover {
+    background: rgb(68, 90, 92);
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 4px 8px rgba(228, 220, 220, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+}
+
+.initials {
+    display: inline-block;
+    font-family: 'Poiret One';
+    font-size: 4.4em;
+    color: #fff;
+    font-weight: 200;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid red;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    font-weight: 300;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Contact section */
+#contact {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+#contact .section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+/* Left contact page */
+#contact .form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+#contact .form-control,
+textarea {
+    max-width: 400px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+
+/* Location, Phone, Email Section */
+.direct-contact-container .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.direct-contact-container .list-item {
+    line-height: 4;
+    color: #aaa;
+}
+
+.direct-contact-container .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    text-align: center;
+    letter-spacing: 1.9px;
+    color: #bbb;
+}
+
+.direct-contact-container .place {
+    margin-left: 20px;
+}
+
+.direct-contact-container .phone {
+    margin-left: 20px;
+}
+
+.direct-contact-container .gmail {
+    margin-left: 20px;
+}
+
+.direct-contact-container .contact-text a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-list li a {
+    color: #fff;
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+    background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+    color: #000;
+}
+
+.direct-contact-container .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .direct-contact-container,
+    .form-horizontal {
+        margin: 0 auto;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+    }
+
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+
+    .direct-contact-container,
+    .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+
+    #conatct .form-control,
+    textarea {
+
+        margin: 0 auto;
+    }
+
+
+    .name,
+    .email,
+    textarea {
+        width: 280px;
+    }
+
+
+    .social-media-list {
+        left: 0;
+    }
+
+    .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+    }
+
+    .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    .send-button {
+        width: 99%;
+    }
+}
